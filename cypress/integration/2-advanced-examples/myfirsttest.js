@@ -39,4 +39,12 @@ describe("Facebook test cases", function () {
         cy.get('[data-testid=royal_login_button]').click();
     })
 
+    it("Login test valid email and valid password 2", function () {
+        cy.get('[data-testid=royal_email]').clear();
+        cy.get('[data-testid=royal_email]').type('validemail@gmail.com');
+        cy.get('[data-testid=royal_pass]').clear();
+        cy.get('[data-testid=royal_pass]').type('validpassword');
+        cy.get('[data-testid=royal_login_button]').click();
+    })
+
 })
